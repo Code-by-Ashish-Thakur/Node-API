@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Code-by-Ashish-Thakur/Node-API.git"
+    "url": "git+https://github.com/Code-by-Ashish-Thakur/Node-API"
   },
   "license": "ISC",
   "author": "Ashish",
@@ -18,6 +18,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "mysql2": "^3.14.1",
     "nodemon": "^3.1.10"
   }
 }
