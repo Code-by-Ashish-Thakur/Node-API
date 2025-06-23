@@ -25,13 +25,20 @@ const connection = mysql.createConnection({
 // -> This api to send the data in mysql 
 
 
+app.post('/register', (req, res) => {
+    const { name, email, password } = req.body;
 
+    const sql = 'INSERT INTO users (name, email, password) VALUES (?, ?, ?)';
 
+    connection.query(sql, [name, email, password], (err, result) => {
+        if (err) {
+            console.error('❌ Error inserting:', err);
+            return res.status(500).json({ message: 'Database error' });
+        }
+        res.status(200).json({ message: 'User registered successfully', id: result.insertId });
+    });
 
-
-
-
-
+});
 
 
 
