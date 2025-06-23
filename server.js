@@ -32,7 +32,7 @@ app.post('/register', (req, res) => {
 
     connection.query(sql, [name, email, password], (err, result) => {
         if (err) {
-            console.error('❌ Error inserting:', err);
+            console.error(' Error inserting:', err);
             return res.status(500).json({ message: 'Database error' });
         }
         res.status(200).json({ message: 'User registered successfully', id: result.insertId });
