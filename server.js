@@ -58,6 +58,8 @@ app.get('/getusers', (req, res) => {
 });
 
 
+
+
 connection.connect((err) => {
     if (err) throw err;
     console.log("Database connected succesfully ");
