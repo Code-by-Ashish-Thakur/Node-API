@@ -26,7 +26,6 @@ http.createServer((req, res) => {
             req.on('end', () => {
                 let rawData = Buffer.concat(dataBody).toString();
                 let readData = queryString.parse(rawData);
-                console.log(readData);
 
                 let dataString = "My name is " + readData.name + " and my email is " + readData.email;
 

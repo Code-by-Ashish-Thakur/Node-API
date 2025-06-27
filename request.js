@@ -1,5 +1,6 @@
 const http = require('http');
 
+
 http.createServer((req, res) => {
 
     //console.log(req);   // ye sari request ko print kr dega iska console or client ka console alg-2 hote hai
