@@ -1,0 +1,28 @@
+index.js // main entry point (server creation using express , db connection (import and make connection ))
+db folder --> config.js // db configs means username password , url (values will come from .env file )
+        ---> connection.js // logic to make databse connection 
+
+src -->
+models // ---> all databse schemas like user schema cource schema 
+     ---> userModel.js  // make realtions as well between user and course 
+     ---> courseModel.js 
+     ---> index.js 
+routes ---> authRoutes.js // login api end point  signUp api end points 
+       ----> userRoutes.js --> gelAll users end points  , updateUser end points 
+       ----> courseRoutes.js --> course reated end points buyCourse , allcourse , getUserCourse atleast 6 
+       ---> index.js which will import all end points of route folder
+
+controller ---> authController.js --> apis for authRoutes 
+           ----> userController.js ---> apis for user controllers
+           ----> courseController.js --> apis for course controllers 
+validators ----> you will use express validator 
+           ---> authValidators --> validator for auth apis 
+           ---> userValidators ---> validators for user apis 
+           ----> courseValidators ---> validators for course apis 
+
+------------ out side src ------
+.env 
+.gitIgnore --> .env , node-modules , package.lock.json  
+package.json 
+package.lock.json 
+node_modeules
